@@ -28,7 +28,7 @@ Train APIs (Admin-only, protected by API key)
 Add a New Train
 x-api-key: YOUR_ADMIN_API_KEY
 POST 
-http://localhost:5000/trains/add
+http://localhost:5000/api/trains/add
 
 Body (JSON):
 {
@@ -45,7 +45,7 @@ Body (JSON):
 Get Train Availability
 GET 
 
-http://localhost:5000/trains/availability?source=mangalore&destination=Delhi
+http://localhost:5000/api/trains/availability?source=mangalore&destination=Delhi
 
 Authorization: Bearer <JWT_TOKEN>
 
@@ -54,7 +54,7 @@ Authorization: Bearer <JWT_TOKEN>
 Book a Seat
 Authorization: Bearer <JWT_TOKEN>
 POST 
-http://localhost:5000/bookings/book
+http://localhost:5000/api/bookings/book
 Body (JSON):
 {
   "train_id": 1
@@ -63,10 +63,11 @@ Body (JSON):
 
 Get Specific Booking Details
 GET 
-http://localhost:5000/bookings/:id
+http://localhost:5000/api/bookings/:id
 
 Get Specific Booking Details
-GET /booking/:id
+GET 
+http://localhost:5000/api/booking/:id
 Example:
 GET /booking/2
 
